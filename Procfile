@@ -1,1 +1,1 @@
-web: gunicorn serviceflask:app --timeout 10
+web: gunicorn serviceflask.py:app --timeout 50
