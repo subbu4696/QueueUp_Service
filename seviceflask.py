@@ -19,8 +19,7 @@ model = tensorflow.keras.models.load_model('keras_model.h5')
 labels = ['low item  cart', 'medium cart', 'full cart', 'random ']
 #session['CartWeight']
 app = flask.Flask(__name__)
-app.secret_key = "hello"
-app.permanent_session_lifetime = timedelta(5)
+
 l =[]
 D= {'cartsize':None,'Queue':None}
 
@@ -81,6 +80,6 @@ def getcartsize():
 
 
 if  __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
     #print(hello(nam))
     #app.run(debug=True)
